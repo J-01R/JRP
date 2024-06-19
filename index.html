@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="Design/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:wght@300&family=Dosis:wght@600&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:wght@300&family=Dosis:wght@600&family=Oswald:wght@200..700&family=Roboto&family=Staatliches&display=swap" rel="stylesheet">
+    <script src="JS/script.js" defer></script>
+    <script src="JS/app.js" defer></script>
+</head>
+<body>
+  <div class="frame">
+    <div class="hero" id="hero-section">
+      <div class="hero-background"></div>
+      <div class="hero-image">
+        <img src="./Assets/JRText2.png" alt="Hero Image">
+      </div>
+    </div>
+
+    <div class="discover-text">
+      DISCOVER ▸ ∐ ︱ ∑
+    </div>
+
+    <div id="main-content">
+      <!-- Main content will be dynamically loaded here -->
+    </div>
+
+    <div class="menu-left">
+      <ul>
+        <li><a href="#" onclick="loadContent('index.html', this)">⌂ Home</a></li>
+        <li><a href="#" onclick="loadContent('bachelor.html', this)">Bachelor</a></li>
+        <li><a href="#" onclick="loadContent('gallery.html', this)">Gallery</a></li>
+        <li><a href="#" onclick="loadContent('projects.html', this)">Projects</a></li>
+      </ul>
+    </div>
+
+    <div id="clock">
+      <h1 id="date-time"></h1>
+    </div>
+
+    <div id="social-icons" class="social-icons">
+      <a href="https://github.com/J-01R"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/j-01r"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:io.johnny@outlook.com"><i class="fas fa-envelope"></i></a>
+      <a href="path/to/your/cv.pdf" download><i class="fas fa-file-download"></i></a>
+      <p>CONNECT 〆-</p>
+    </div>
+
+    <footer>
+      <p>© 2024 io.johnny - All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
