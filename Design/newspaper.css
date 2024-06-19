@@ -1,0 +1,211 @@
+/* General styles for all pages */
+body {
+    font-family: 'Droid Serif', serif;
+    font-size: 16px;
+    color: #2f2f2f;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+}
+
+.frame {
+    border: 5px solid black;
+    padding: 100px;
+    margin: 20px;
+    box-sizing: border-box;
+    background-color: white;
+    background-image: url('/Assets/LNU.svg'); /* Default image, specific pages can override */
+    background-size: contain;
+    background-position: bottom right; /* Move the image to the bottom left */
+    background-repeat: no-repeat;
+}
+
+header {
+    font-family: 'Playfair Display', serif;
+    font-weight: 1000;
+    font-size: 60px;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 72px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.head {
+    text-align: center;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.subhead {
+    text-transform: uppercase;
+    padding: 8px 0 8px 0;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Specific to newspaper style */
+.collumns {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.collumn {
+    font-size: 12px;
+    line-height: 20px;
+    width: calc(30% - 20px);
+    margin-bottom: 30px;
+    margin-left: 18px;
+    margin-right: -5px;
+    box-sizing: border-box;
+    transition: all .7s;
+    position: relative;
+    text-align: justify;
+}
+
+.collumn .headline,
+.collumn .citation {
+    text-align: left;
+    margin-left: 10px;
+}
+
+.collumn .headline.hl1 {
+    font-weight: 700;
+    font-size: 12px; /* Smaller font size */
+    text-transform: uppercase;
+    padding: 30px 0 20px 0;
+}
+
+.collumn .headline.hl4 {
+    font-weight: 700;
+    font-size: 10px; /* Smaller font size */
+    box-sizing: border-box;
+    padding: 10px 0 10px 0;
+}
+
+.collumn .figure {
+    margin: 0 0 20px;
+}
+
+.collumn .figcaption {
+    font-style: italic;
+    font-size: 12px;
+}
+
+/* Add a horizontal line at the bottom for newspaper style */
+.horizontal-line {
+    width: 89%;
+    margin-top: -30px;
+    margin-left: 20px;
+}
+
+.media {
+    -webkit-filter: sepia(80%) contrast(1) opacity(0.8);
+    filter: sepia(80%) grayscale(1) contrast(1) opacity(0.8);
+    mix-blend-mode: multiply;
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 1300px) {
+    .collumn {
+        width: calc(50% - 20px);
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .collumn {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .frame {
+        padding: 50px;
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .frame {
+        padding: 20px;
+        margin: 5px;
+    }
+
+    header {
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 10px;
+    }
+
+    .subhead {
+        font-size: 16px;
+    }
+
+    .collumn {
+        font-size: 14px;
+    }
+
+    .horizontal-line {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+}
+
+::-webkit-scrollbar-button {
+    width: 1px;
+    height: 1px;
+}
+
+.external {
+    overflow: auto; /* Ensure scrolling is enabled */
+    height: 80vh;
+}
+
+/* Tooltip next to text */
+[data-skill] {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Commented out to hide the percentage values
+[data-skill]::after {
+    content: attr(data-skill) '%';
+    visibility: hidden;
+    color: #2f2f2f;
+    margin-left: 5px;
+}
+
+[data-skill]:hover::after {
+    visibility: visible;
+}
+*/
+
+/* Add spacing between skill items */
+.skill {
+    display: inline; /* Ensure each language starts on a new line */
+    margin-bottom: 10px; /* Add spacing between languages */
+    font-weight: bold; /* Make the text bold */
+}
+.research .headline.hl1 {
+    font-weight: bold;
+    font-size: 16px; /* Adjust font size as needed */
+    text-transform: uppercase;
+    padding: 30px 0 20px 0;
+}
